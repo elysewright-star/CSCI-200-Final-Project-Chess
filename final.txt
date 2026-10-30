@@ -1,0 +1,32 @@
+TITLE: Elyse Wright Section G Chess Endgame Simulator
+ PROGRAM DOCUMENTATION: This program is not the simplest to run. It does require chess knowledge and the ability to memorize piece positions.
+ When setting the position for each piece, the player must be able to put the pieces in legal places. To add starting places, the user must 
+ enter a char a - h as the file (x position), and an int 1 - 8 as the rank (y position). Then, they must choose (if there is more than one 
+ option) which piece to move, or to offer or accept a draw (which a player can do at any time). Then, to make things simpler, I generated a 
+ vector of pairs of moves a player can choose for their piece, and then the player will enter the number correlated with that move. The 
+ piece then moves and the turn goes to the other color. This goes back and forth until a checkmate is achieved (a king has no possible moves
+ left). There are multiple things I would like to implement in this program. First, it is pretty easy to get the move checker to fail, so 
+ I would make sure I do more checks to ensure that I offer all possible moves and only possible moves. I also wish I added a stalemate 
+ functionality. There are a lot of ways to stalemate a game of chess, and it was beyond the scope of what I could do for this project, 
+ but something that I could implement in the future. Finally, I would like to add more pieces. Now that I understand the process of
+ creating a move checker for a piece, I think this would be a reasonable addition for me to add to this program. I imagine that the pawn
+ would be the most difficult to program because it has so many rule exceptions, but I think it would be possible to implement in this 
+ program. Generally, making the user experience better would be a good idea. 
+CLASS DESCRIPTION: I created two classes: King and Rook. Each class holds the position of the piece, the color of the piece, and a method
+ to get the possible moves for the piece. Along with the default constructor and getters and setters, the King class holds if the piece was
+ in check. Along with the default constructor and getters and setters, the Rook class holds if the piece was alive on the board. Creating
+ these classes definitely helped me with this code. Without the classes, I would have had a much harder time making the pieces and having
+ them move and die. Additionally, having the classes contain a move validation method was good to keep my main() as clean as possible.
+LIST DATA STRUCTURE: I created multiple vectors of pairs. My getMoves() method for each piece returned a vector of pairs for the possible
+ coordinates for the piece to move to. I chose a vector because it was easy to push_back() and to loop through. I never needed to insert
+ or delete an element or quickly access anything, so a vector was a good choice for me.
+FILE I/O: I chose to keep track of all moves in an out file. The traditional way to keep track of old chess games is by a list of moves in
+ a chess notation system. I felt that this would help a user easily save their endgame simulation for future reference, and the method I
+used to document moves is standard for chess players.
+REFLECTIONS: This project definitely helped my logic skills, my class usage skills, and my ability to keep track of large amounts of code.
+ I had a lot of rules to keep track of, between how the pieces moved, where they could move, if something blocked a piece, and when the
+  kings were in check. The logic was difficult for me to actually write out and I made some mistakes along the way. I had a lot of
+ lines of code to keep track of, and when I changed something I had to make sure I caught everything that would branch off from the change.
+ I also had to think critically about how I made my classes, and how they could interact with each other. There were multiple times that I 
+ got part of the way into writing a section of my code and had to completely change the direction I was heading in. In the future, I will 
+ make sure to fully work out the order I want things to go, work up the psudocode, and then fill in the working code, testing as I go. 
